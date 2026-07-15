@@ -1,14 +1,12 @@
 from flet import *
-from flet_android_notifications import FletAndroidNotifications
+from android_notify import Notification
 
 def main(page: Page):
-    notifications = FletAndroidNotifications()
+    
 
     async def send(e):
-        await notifications.request_permissions()
-        await notifications.show_notification(
-            notification_id=1, title="Hello", body="It works Abo Hamdy!",
-        )
+        Notification(title='Hello',message="Abo hamdy").send()
+            
 
     page.add(Button(content="Send", on_click=send))
     page.update()
