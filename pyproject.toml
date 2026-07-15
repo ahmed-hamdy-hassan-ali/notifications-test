@@ -1,0 +1,8 @@
+[tool.flet.android]
+dependencies = [
+
+  "pyjnius", "android-notify","flet"
+]
+
+[tool.flet.android.permission]
+"android.permission.POST_NOTIFICATIONS" = true
